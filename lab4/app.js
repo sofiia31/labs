@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const app = express();
 const jsonParser = express.json();
 
-mongoose.connect("mongodb://localhost:27017/usersdb", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb://mongo:27017/usersdb", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("З'єднання з MongoDB через Mongoose успішно встановлено");
         app.listen(3000, function () {
