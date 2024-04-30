@@ -50,7 +50,6 @@ async function CreateUser(userName, userAge) {
         document.querySelector("tbody").append(row(user));
     }
 }
-
 async function EditUser(userId, userName, userAge) {
     const response = await fetch("/api/users/" + userId, {
         method: "PUT",
